@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -16,7 +17,26 @@ namespace COMP123_S2019_FinalTestB.Views
 {
     public partial class CharacterGeneratorForm : MasterForm
     {
-        
+
+        List<string> FirstNameList;
+        List<string> LastNameList;
+        List<string> FisrtName;
+        List<string> LastName;
+        List<string> InventoryList;
+        public static CharacterGeneratorForm characterForm;
+        public void LoadNames(Random FirstName, Random LastName)
+        {
+            FirstName =  "..\\..\\Data\\firstName.txt";
+            LastName = "..\\..Data\\lastName.txt";
+        }
+        public void GenerateNames()
+        {
+            Random FirstNames = FirstNameList();
+            Random LastNames = LastNameList();
+        }
+
+
+
         public CharacterGeneratorForm()
         {
             InitializeComponent();
@@ -40,6 +60,18 @@ namespace COMP123_S2019_FinalTestB.Views
             {
                 MainTabControl.SelectedIndex++;
             }
+        }
+        
+        
+        private void GenerrateNameButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            characterForm = new CharacterGeneratorForm();
+            Application.Exit(characterForm);
         }
     }
 }

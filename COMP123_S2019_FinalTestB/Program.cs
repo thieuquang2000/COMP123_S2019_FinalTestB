@@ -13,8 +13,14 @@ using System.Windows.Forms;
  */
 namespace COMP123_S2019_FinalTestB
 {
+    public class Character
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
     public static class Program   
     {
+        
         public static CharacterGeneratorForm characterForm;
         /// <summary>
         /// The main entry point for the application.
@@ -27,6 +33,7 @@ namespace COMP123_S2019_FinalTestB
 
             characterForm = new CharacterGeneratorForm();
             Application.Run(characterForm);
+            Application.Exit(characterForm);
         }
     }
 }
