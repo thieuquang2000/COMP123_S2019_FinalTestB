@@ -30,7 +30,7 @@ namespace COMP123_S2019_FinalTestB.Views
             string LastNameList = "..\\..\\Data\\lastName.txt";
             using (StreamReader readFirstName = new StreamReader(File.Open(FirstNameList, FileMode.Open), false))
             {
-
+                s
             }
             
         }
