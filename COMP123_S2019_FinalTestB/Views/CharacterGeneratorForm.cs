@@ -18,7 +18,7 @@ namespace COMP123_S2019_FinalTestB.Views
     public partial class CharacterGeneratorForm : MasterForm
     {
 
-        List<string> FirstNameList;
+        public string FirstNameList;
         List<string> LastNameList;
         List<string> FisrtName;
         List<string> LastName;
@@ -26,8 +26,13 @@ namespace COMP123_S2019_FinalTestB.Views
         public static CharacterGeneratorForm characterForm;
         public void LoadNames(Random FirstName, Random LastName)
         {
-            FirstName =  "..\\..\\Data\\firstName.txt";
-            LastName = "..\\..Data\\lastName.txt";
+            string FirstNameList = "..\\..\\Data\\firstName.txt";
+            string LastNameList = "..\\..\\Data\\lastName.txt";
+            using (StreamReader readFirstName = new StreamReader(File.Open(FirstNameList, FileMode.Open), false))
+            {
+
+            }
+            
         }
         public void GenerateNames()
         {
